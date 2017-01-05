@@ -1,0 +1,13 @@
+gpu_mem_1024=256  
+hdmi_ignore_cec_init=1  
+disable_overscan=1
+start_x=1  
+disable_splash=1
+dtoverlay=lirc-rpi  
+hdmi_force_hotplug=1
+gpu_mem_256=112
+sdtv_aspect=1
+dtparam=gpio_in_pin=18
+gpu_mem_512=144
+dtparam=gpio_out_pin=17
+hdmi_drive=2
