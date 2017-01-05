@@ -1,0 +1,33 @@
+# MISC
+alias cls=clear
+alias mysql='mysql --auto-rehash'
+alias tmux='tmux -2'
+alias arc='PORT=4800 slc arc'
+alias sshvbox="ssh -p 2222 node@217.128.13.95"
+alias whatismyip='~/.dotfiles/bin/whatismyip'
+alias helloworld='~/.dotfiles/bin/start.sh'
+
+# HISTORY
+alias hs='history | grep --color=auto'
+
+# GIT
+alias gs='git status'
+alias gc='git commit -m'
+alias gac='git commit -am'
+
+# CD
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+
+# LS
+alias ls='ls $LS_OPTIONS --color=auto'
+alias ll='ls $LS_OPTIONS -lAh'
+alias l='ls $LS_OPTIONS -lh'
+alias la='ls $LS_OPTIONS -A'
+
+
+# THEFUCK
+eval "$(thefuck --alias)"

@@ -84,33 +84,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cls=clear
 
-alias ls='ls $LS_OPTIONS --color=auto'
-alias ll='ls $LS_OPTIONS -lAh'
-alias l='ls $LS_OPTIONS -lh'
-alias la='ls $LS_OPTIONS -A'
-
+source ~/.dotfiles/aliases/aliases
 source ~/.dotfiles/aliases/ssh
 
-# autocomplete on mysql
-alias mysql='mysql --auto-rehash'
-
-alias tmux='tmux -2'
-
-alias whatismyip='~/scripts/whatismyip'
 
 export NVM_DIR="/home/bjorge/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export LC_ALL=en_US.UTF-8 et export LANG=en_US.UTF-8
-alias sshvbox="ssh -p 2222 node@217.128.13.95"
-
-alias arc='PORT=4800 slc arc'
 
 
 
-# thefuck aliases
-eval "$(thefuck --alias)"
 
 cls
