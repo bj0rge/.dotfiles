@@ -7,6 +7,8 @@ alias sshvbox="ssh -p 2222 node@217.128.13.95"
 alias whatismyip='~/.dotfiles/bin/whatismyip'
 alias helloworld='~/.dotfiles/bin/start.sh'
 alias szsh="source ~/.zshrc"
+alias a='vim ~/.dotfiles/aliases/aliases'
+alias e='exit'
 
 # HISTORY
 alias hs='history | grep --color=auto'
@@ -15,9 +17,14 @@ alias hs='history | grep --color=auto'
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
+alias gA='git add -A'
 alias gc='git commit -m'
 alias gac='git commit -am'
+alias gAc='git add -A && git commit -m'
+alias gm='git merge'
 alias gp='git push'
+alias gconfpnp='git config user.name bjorge && git config user.email bastien.jorge@parknplug.fr'
+alias gconf='git config user.name bj0rge && git config user.email bastien.jorge@gmail.con'
 
 # CD
 alias cd..='cd ..'
