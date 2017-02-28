@@ -6,6 +6,7 @@ alias arc='PORT=4800 slc arc'
 alias sshvbox="ssh -p 2222 node@217.128.13.95"
 alias whatismyip='~/.dotfiles/bin/whatismyip'
 alias helloworld='~/.dotfiles/bin/start.sh'
+alias printcolors='~/.dotfiles/bin/printcolors.sh'
 alias szsh="source ~/.zshrc"
 alias a='vim ~/.dotfiles/aliases/aliases'
 alias e='exit'
