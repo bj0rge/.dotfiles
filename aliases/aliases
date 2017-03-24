@@ -25,7 +25,7 @@ alias gAc='git add -A && git commit -m'
 alias gm='git merge'
 alias gp='git push'
 alias gconfpnp='git config user.name bjorge && git config user.email bastien.jorge@parknplug.fr'
-alias gconf='git config user.name bj0rge && git config user.email bastien.jorge@gmail.con'
+alias gconf='git config user.name bj0rge && git config user.email bastien.jorge@gmail.com'
 
 # CD
 alias cd..='cd ..'
