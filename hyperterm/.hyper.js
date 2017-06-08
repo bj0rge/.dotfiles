@@ -109,7 +109,6 @@ module.exports = {
   //   `project#1.0.1`
     plugins: [
         'hyperterm-material-bjorge',
-        'hyper-transparent-bg',
     ],
 
   // in development, you can create a directory under
