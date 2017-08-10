@@ -28,6 +28,7 @@ alias gp='git push'
 alias gco='git checkout'
 alias gconfpnp='git config user.name bjorge && git config user.email bastien.jorge@parknplug.fr'
 alias gconf='git config user.name bj0rge && git config user.email bastien.jorge@gmail.com'
+alias gclean='git fetch --all && git remote prune origin'
 
 # CD
 alias cd..='cd ..'
