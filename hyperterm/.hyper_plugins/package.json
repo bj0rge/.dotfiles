@@ -7,7 +7,7 @@
   "license": "MIT",
   "homepage": "https://hyper.is",
   "dependencies": {
-    "hyperterm-material-bjorge": "git+https://git@github.com/bj0rge/hyperterm-material-bjorge.git"
+    "hyperterm-material-bjorge": "bj0rge/hyperterm-material-bjorge"
   },
   "false": {}
 }
