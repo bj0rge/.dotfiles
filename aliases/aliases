@@ -10,6 +10,7 @@ alias printcolors='~/.dotfiles/bin/printcolors.sh'
 alias szsh="source ~/.zshrc"
 alias a='vim ~/.dotfiles/aliases/aliases'
 alias e='exit'
+#alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # HISTORY
 alias hs='history | grep --color=auto'
@@ -24,6 +25,7 @@ alias gac='git commit -am'
 alias gAc='git add -A && git commit -m'
 alias gm='git merge'
 alias gp='git push'
+alias gco='git checkout'
 alias gconfpnp='git config user.name bjorge && git config user.email bastien.jorge@parknplug.fr'
 alias gconf='git config user.name bj0rge && git config user.email bastien.jorge@gmail.com'
 
@@ -39,6 +41,12 @@ alias ls='ls $LS_OPTIONS --color=auto'
 alias ll='ls $LS_OPTIONS -lAh'
 alias l='ls $LS_OPTIONS -lh'
 alias la='ls $LS_OPTIONS -A'
+
+
+# CONTACTX
+alias cx='cd ~/Documents/contactx'
+alias cxs='subl ~/Documents/contactx'
+alias cxl='cx && yarn start'
 
 
 # THEFUCK
