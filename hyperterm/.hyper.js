@@ -5,10 +5,10 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 17,
+    fontSize: 16,
 
     // font family with optional fallbacks
-    fontFamily: '"Menlo for Powerline", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Operator Mono Book", "Menlo for Powerline", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -76,7 +76,7 @@ module.exports = {
     // make sure to use a full path if the binary name doesn't work
     // (e.g `C:\\Windows\\System32\\bash.exe` instead of just `bash.exe`)
     // if you're using powershell, make sure to remove the `--login` below
-    shell: '',
+    shell: '/bin/zsh',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
@@ -89,7 +89,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: false,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -97,6 +97,12 @@ module.exports = {
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
+
+    // for hyperterm-alternatescroll plugin 
+    alternateScroll: {
+      // 1 to 100 is supported 
+      scrollSpeed: 80
+    },
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
@@ -109,6 +115,7 @@ module.exports = {
   //   `project#1.0.1`
     plugins: [
         'hyperterm-material-bjorge',
+        'hyperterm-alternatescroll',
     ],
 
   // in development, you can create a directory under
