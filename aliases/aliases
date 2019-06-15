@@ -21,6 +21,7 @@ alias gd='git diff'
 alias ga='git add'
 alias gA='git add -A'
 alias gc='git commit -m'
+alias gl="git log --first-parent --pretty=\"format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D\""
 alias gac='git commit -am'
 alias gAc='git add -A && git commit -m'
 alias gm='git merge'
@@ -39,16 +40,22 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 # LS
-alias ls='ls $LS_OPTIONS --color=auto'
+#alias ls='ls $LS_OPTIONS --color=auto'
+alias ls='ls $LS_OPTIONS -g'
 alias ll='ls $LS_OPTIONS -lAh'
 alias l='ls $LS_OPTIONS -lh'
 alias la='ls $LS_OPTIONS -A'
 
 
-# CONTACTX
-alias cx='cd ~/Documents/contactx'
-alias cxs='subl ~/Documents/contactx'
-alias cxl='cx && yarn start'
+# SPENDESK 
+alias sdk='cd ~/sites/spendesk/'
+alias sdks='code ~/sites/spendesk/'
+alias sdyarn='yarn && yarn start'
+alias sdydebug='yarn && yarn debug'
+alias sdls='sdk && cd packages/server && sdydebug'
+alias sdla='sdk && cd packages/app-desktop && sdyarn'
+alias sdlb='sdk && cd packages/backoffice && sdydebug'
+alias killserver="kill -9 $(ps aux | grep 'ts-node-dev' | awk '{print $2}')"
 
 
 # THEFUCK
