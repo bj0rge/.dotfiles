@@ -58,5 +58,3 @@ alias sdlb='sdk && cd packages/backoffice && sdydebug'
 alias killserver="kill -9 $(ps aux | grep 'ts-node-dev' | awk '{print $2}')"
 
 
-# THEFUCK
-eval "$(thefuck --alias)"
