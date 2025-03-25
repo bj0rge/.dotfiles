@@ -81,12 +81,20 @@ echo "New ~/.zshrc copied successfully."
 # Modify ~/.zshrc to replace DEFAULT_USER
 DEFAULT_USER=$(whoami)
 echo "Updating DEFAULT_USER in ~/.zshrc..."
-sed -i '' "s/DEFAULT_USER=\"bjorge\"/DEFAULT_USER=\"$DEFAULT_USER\"/g" ~/.zshrc || handle_error
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i '' "s/DEFAULT_USER=\"bjorge\"/DEFAULT_USER=\"$DEFAULT_USER\"/g" ~/.zshrc || handle_error
+else
+  sed -i "s/DEFAULT_USER=\"bjorge\"/DEFAULT_USER=\"$DEFAULT_USER\"/g" ~/.zshrc || handle_error
+fi
 echo "DEFAULT_USER updated successfully."
 
 # Modify ~/.zshrc to replace /home/bjorge with /Users/$(whoami)
 echo "Updating home directory path in ~/.zshrc..."
-sed -i '' "s|/home/bjorge|/Users/$DEFAULT_USER|g" ~/.zshrc || handle_error
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i '' "s|/home/bjorge|/Users/$DEFAULT_USER|g" ~/.zshrc || handle_error
+else
+  sed -i "s|/home/bjorge|/Users/$DEFAULT_USER|g" ~/.zshrc || handle_error
+fi
 echo "Home directory path updated successfully."
 
 # Download agnoster-nanof.zsh-theme
