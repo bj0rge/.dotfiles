@@ -107,7 +107,7 @@ echo "agnoster-nanof.zsh-theme downloaded successfully."
 # Clone zsh-syntax-highlighting plugin
 echo "Cloning zsh-syntax-highlighting plugin..."
 cd ~/.oh-my-zsh/custom/plugins || handle_error
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git || handle_error
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git || handle_error
 echo "zsh-syntax-highlighting plugin cloned successfully."
 
 # Install spf13-vim3
