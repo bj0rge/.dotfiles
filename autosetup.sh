@@ -24,6 +24,11 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt-get update && sudo apt-get install -y git || handle_error
     echo "git installed successfully."
   fi
+  if ! command_exists zsh; then
+    echo "Installing zsh..."
+    sudo apt-get update && sudo apt-get install -y zsh || handle_error
+    echo "zsh installed successfully."
+  fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # macOS-specific commands
   if ! command_exists brew; then
@@ -42,6 +47,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Installing git via Homebrew..."
     brew install git || handle_error
     echo "git installed successfully."
+  fi
+  if ! command_exists zsh; then
+    echo "Installing zsh via Homebrew..."
+    brew install zsh || handle_error
+    echo "zsh installed successfully."
   fi
   # Add Homebrew to PATH for macOS
   echo "Adding Homebrew to PATH..."
