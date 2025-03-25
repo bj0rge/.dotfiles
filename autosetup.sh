@@ -64,9 +64,11 @@ else
 fi
 
 # Execute the commands
-echo "Installing Oh My Zsh..."
-curl -L http://install.ohmyz.sh | sh || handle_error
-echo "Oh My Zsh installed successfully."
+if ! command_exists zsh; then
+  echo "Installing Oh My Zsh..."
+  curl -L http://install.ohmyz.sh | sh || handle_error
+  echo "Oh My Zsh installed successfully."
+fi
 
 # Rename ~/.zshrc to ~/.zshrc.bak
 echo "Backing up existing ~/.zshrc..."
