@@ -30,6 +30,11 @@ install_dependencies() {
       sudo apt-get update && sudo apt-get install -y zsh || handle_error
       echo "zsh installed successfully."
     fi
+    if ! command_exists vim; then
+      echo "Installing vim..."
+      sudo apt-get update && sudo apt-get install -y vim || handle_error
+      echo "vim installed successfully."
+    fi
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS-specific commands
     if ! command_exists brew; then
@@ -53,6 +58,11 @@ install_dependencies() {
       echo "Installing zsh via Homebrew..."
       brew install zsh || handle_error
       echo "zsh installed successfully."
+    fi
+    if ! command_exists vim; then
+      echo "Installing vim via Homebrew..."
+      brew install vim || handle_error
+      echo "vim installed successfully."
     fi
     # Add Homebrew to PATH for macOS
     echo "Adding Homebrew to PATH..."
@@ -140,16 +150,15 @@ source_zshrc() {
   echo "~/.zshrc sourced successfully."
 }
 
-
-install_dependencies()
-install_zsh()
-backup_zshrc()
-copy_custom_zshrc()
-update_default_user()
-update_home_folder()
-use_custom_agnoster_theme()
-use_zsh_syntax_highlighting()
-install_spf13_vim3()
-source_zshrc()
+install_dependencies
+install_zsh
+backup_zshrc
+copy_custom_zshrc
+update_default_user
+update_home_folder
+use_custom_agnoster_theme
+use_zsh_syntax_highlighting
+install_spf13_vim3
+source_zshrc
 
 echo "Setup completed successfully."
